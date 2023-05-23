@@ -1,0 +1,87 @@
+  
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+            background-image: url("../images/bg.jpg");
+            background-repeat: none !important;
+            background-size: 1290px 1350px;
+        }
+
+        .container {
+            margin:60px 100px;
+            display: flex;
+        }
+
+        .left-column {
+            flex: 1;
+            padding-right: 20px;
+            border-right:1px solid rgb(199, 187, 187) ;
+        }
+
+        .right-column {
+            flex: 2;
+            padding-left: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333333;
+        }
+        h2{
+            text-decoration: underline;
+        }
+        
+
+        img.profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .skill-progress {
+            width: 200px;
+            height: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid black;
+            
+        }
+
+        .skill-progress .progress {
+            height: 100%;
+            background-color: #2196f3;
+            
+        }
+        .content{
+            padding: 0px 50px;
+            width:400px
+           
+        }
+        img{
+            display: inline-block;
+        }
+        .image-wrapper{
+            text-align: center;
+
+        }
