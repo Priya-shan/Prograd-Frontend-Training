@@ -1,0 +1,26 @@
+body{
+    background: linear-gradient(to bottom, #00BFFF, #00FFFF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.items-bg{
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+  .containerr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:auto;
+}
