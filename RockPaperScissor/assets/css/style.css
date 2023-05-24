@@ -1,1 +1,7 @@
 /* This is style.css page */
+body{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    height: 561px;  
+    background-repeat: no-repeat;
+}
