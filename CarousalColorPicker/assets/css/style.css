@@ -1,1 +1,55 @@
-/* <!-- This is file structure for style.css --> */
+.container {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .next,
+  .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .next:hover,
+  .prev:hover {
+    background-color: #888;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .colorPicker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .text {
+    position: absolute;
+    left: 42%;
+  }
+  
+  #colorPicker {
+    width: 200px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: -100px;
+  }
+  
