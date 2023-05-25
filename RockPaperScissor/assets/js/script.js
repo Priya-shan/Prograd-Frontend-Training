@@ -7,11 +7,13 @@ var wrongAudio = new Audio("assets/audio/wrong_sound.wav");
 
 function showUserSelectedValue(selectedValue) {
     document.getElementById("userValue").innerHTML = "<img src='assets/images/" + selectedValue + ".png' width=100px height=100px>";
+    document.getElementById("userValue_mobile").innerHTML = "<img src='assets/images/" + selectedValue + ".png' width=100px height=100px>";
     var options = ["rock", "paper", "scissor"];
     var rand = Math.floor(Math.random() * 3);
     console.log(rand);
     computerValue = options[rand];
     document.getElementById("computerValue").innerHTML = "<img src='assets/images/" + computerValue + ".png' width=100px height=100px>";
+    document.getElementById("computerValue_mobile").innerHTML = "<img src='assets/images/" + computerValue + ".png' width=100px height=100px>";
 
     calculateScore(selectedValue, computerValue);
 }
@@ -51,6 +53,9 @@ function calculateScore(user, computer) {
     setTimeout(function () {
         document.getElementById("computerValue").innerHTML = "<img src='assets/images/question.png' width=100px height=100px>";
         document.getElementById("userValue").innerHTML = "<img src='assets/images/question.png' width=100px height=100px>";
+        
+        document.getElementById("computerValue_mobile").innerHTML = "<img src='assets/images/question.png' width=100px height=100px>";
+        document.getElementById("userValue_mobile").innerHTML = "<img src='assets/images/question.png' width=100px height=100px>";
 
         if (getComputerScore() === 3 || getUserScore() === 3) {
 
