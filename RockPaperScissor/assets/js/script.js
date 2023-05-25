@@ -52,15 +52,25 @@ function calculateScore(user, computer) {
         document.getElementById("computerValue").innerHTML = "<img src='assets/images/question.png' width=100px height=100px>";
         document.getElementById("userValue").innerHTML = "<img src='assets/images/question.png' width=100px height=100px>";
 
-        if (getComputerScore() === 5 || getUserScore() === 5) {
+        if (getComputerScore() === 3 || getUserScore() === 3) {
 
             if (getComputerScore() > getUserScore()) {
-                alert("You Lose - Computer Wins");
+                document.getElementById("scoreCard").style.display="block";
+                document.getElementById("scoreCard").style.visibility="block";
+                document.getElementById("scoreCard").innerText="You Lost ! ☹";
+                setTimeout(function () {
+                    location.reload();
+                },2000);
             }
             else {
-                alert("You Win - Computer Looses");
+                document.getElementById("scoreCard").innerText="You Won ! ✨";
+                document.getElementById("scoreCard").style.visibility="block";
+                document.getElementById("scoreCard").style.display="block";
+                setTimeout(function () {
+                    location.reload();
+                },2000);
             }
-            location.reload();
+            // location.reload();
         }
        
     }, 2000);

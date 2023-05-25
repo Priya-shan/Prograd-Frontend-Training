@@ -5,3 +5,60 @@ body{
     height: 561px;  
     background-repeat: no-repeat;
 }
+
+.flex-container{
+    display: flex;
+    padding: 0px 30px;
+    justify-content: space-between;
+    
+    /* grid-template-columns: auto auto ;
+    grid-template-rows: auto; */
+}
+.mobileView{
+    display: none;
+}
+.item{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.514);
+    width: 100px;
+    height: 100px;
+}
+.item:hover{
+    cursor: pointer;
+}
+.itemScore{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width:150px;
+    height: 15px;
+    border-radius: 20px;
+    padding:20px;
+    text-align: center;
+}
+.itemv{
+
+    align-self: flex-end;
+}
+.scorecard{
+    width:250px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.514);
+    position: absolute;
+    top:10%;
+    left:50%;
+    margin-left:-125px;
+    border-radius: 20px;
+    display: none;
+    text-align: center;
+    padding: 0px 0px;
+    padding-top:10px;
+    margin-top:5px
+}
+@media (max-width:567px){
+    .mobileView{
+        display: flex;
+    }
+    .itemv{
+        display: none;
+    }
+}
