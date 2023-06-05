@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Welcome to Bharat School</h3>
+    <label>Enter Marks</label>
+    <input type="number" id="marks">
+
+    <br>
+    <br>
+    <button onclick=getStatus()>Get Status</button>
+
+    <br>
+    <h5 id="result"></h5>
+</body>
+<script>
+    function getStatus(){
+        var mark=parseInt(document.getElementById("marks").value);
+        console.log(mark);
+        var result=0;
+        if(mark < 50){
+            result="Admission Application Rejected";
+        }
+        else if(mark>50 && mark<70){
+            result="Acceptable to admit";
+        }
+        else if(mark>70 && mark<90){
+            result="Good to admit";
+        }
+        else{
+            result="Outstanding to admit";
+        }
+
+        document.getElementById("result").innerText="Status = "+result;
+    }
+</script>
+</html>

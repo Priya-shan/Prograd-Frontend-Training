@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <style>
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-content: center;
+            }
+            .grid-item{
+                text-align: center;
+                width: 100px;
+                height: 100px;
+                margin:10px;
+                border: 2px solid black;
+            }
+            h3{
+                padding:20px;
+            }
+            .display-bar{
+                height:50px;
+                border:1px solid black;
+                border-radius: 30px;
+            }
+            body{
+                background-image: url("bg.png");
+            }
+        </style>
+        
+    </head>
+    <script>
+    
+    function add(){
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var res=parseInt(num1)+parseInt(num2);
+        console.log(res);
+        document.getElementById("result").innerHTML=res;
+    }
+    function subract(){
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var res=parseInt(num1)-parseInt(num2);
+        console.log(res);
+        document.getElementById("result").innerHTML=res;
+    }
+    function multiply(){
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var res=parseInt(num1)*parseInt(num2);
+        console.log(res);
+        document.getElementById("result").innerHTML=res;
+    }
+    function divide(){
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var res=parseInt(num1)/parseInt(num2);
+        console.log(res);
+        document.getElementById("result").innerHTML=res;
+    }
+    function double_eq(){
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var res=parseInt(num1)==parseInt(num2);
+        console.log(res);
+        document.getElementById("result").innerHTML=res;
+    }
+    function triple_eq(){
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var res=parseInt(num1)===parseInt(num2);
+        console.log(res);
+        document.getElementById("result").innerHTML=res;
+    }
+    function getValue(valuee){
+        var init=document.getElementById("display").value+valuee;
+        console.log(init);
+        document.getElementById("display").innerText=init;
+    }
+    </script>
+    <body>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <br>
+        <br>
+        <br>
+        <button onclick=add()>Add</button>
+        <button onclick=subract()>Subract</button>
+        <button onclick=multiply()>Multiply</button>
+        <button onclick=divide()>Divide</button>
+        <button onclick=double_eq()>==</button>
+        <button onclick=triple_eq()>===</button>
+        <h2 id="result">Result will be displayed here...</h2>
+
+
+        <div class="display-bar"><h2 id="display"></h2>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item"><h3 onclick="getValue(this)">1</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">2</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">3</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">+</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">4</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">5</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">6</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">-</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">7</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">8</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">9</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">*</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">#</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">0</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">/</h3></div>
+            <div class="grid-item"><h3 onclick="getValue(this)">=</h3></div>
+        </div>
+    </body>
+</html>

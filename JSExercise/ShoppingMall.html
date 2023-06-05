@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Welcome to Shopping mall</h3>
+    <input type="checkbox" id="firstVisit" />
+    <label>Check me if this is your First Visit</label>
+    <br><br>
+    <label>Purchase item Cost</label>
+    <input type="number" id="cost">
+
+    <br><br>
+    <button onclick="calculate()">Calculate Gift Amount</button>
+    <h3 id="result"></h3>
+</body>
+<script>
+    function calculate(){
+    var checkbox = document.getElementById("firstVisit");
+    var firstVisit=false;
+    if (checkbox.checked) {
+        firstVisit=true;
+    }
+    var cost=parseInt(document.getElementById("cost").value);
+    console.log(cost);
+    var giftAmount=0;
+    if(firstVisit){
+        giftAmount+=100;
+    }
+
+
+    if(cost>1000){
+        giftAmount+=500;
+    }
+    else if(cost>3000){
+        giftAmount+=1500;
+    }
+    else if(cost>5000){
+        giftAmount+=3000;
+    }
+    else{
+        giftAmount+=0;
+    }
+    
+    document.getElementById("result").innerText=giftAmount;
+}
+</script>
+
+</html>

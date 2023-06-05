@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Welcome to platina bakery</h2>
+    <label>Enter your Name :</label>
+    <input type="text" id="name">
+    <br><br>
+    <label>Enter your Total Bill Amount :</label>
+    <input type="number" id="amount">
+    <br><br>
+    <label>Todays Day :</label>
+    <select id="discount">
+        <option value="15">Monday</option>
+        <option value="10">Tuesday</option>
+        <option value="12">Wednesday</option>
+        <option value="11">Thursday</option>
+        <option value="13">Friday</option>
+        <option value="14">Saturday</option>
+        <option value="15">Sunday</option>
+    </select>
+    <br>
+    <br>
+    <button onclick=calculate()> Calculate Discount</button>
+    <h3 id="result"></h3>
+</body>
+<script>
+    function calculate(){
+        var name=document.getElementById("name").value;
+        var amount=parseInt(document.getElementById("amount").value);
+        var discount=parseInt(document.getElementById("discount").value);
+        console.log(name+" "+amount+" "+discount);
+
+        var result=amount-((amount/100)*discount);
+        console.log("result -> "+result);
+
+        document.getElementById("result").innerText="Hii "+name+ " your discounted price is "+result;
+    }
+</script>
+
+</html>
